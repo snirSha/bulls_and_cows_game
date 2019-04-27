@@ -22,7 +22,7 @@ using namespace bullpgia{
      string bullpgia::Guesser guess(){
 	this->guessNumber++;
 	string newGuess="";
-	std::cin>>newGuess;
+	//std::cin>>newGuess;
         return newGuess;
      }
 
