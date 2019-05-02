@@ -25,7 +25,7 @@ The rules of the game in our course are:
 
 Chooser: A function that use random number with repetitions to build a string in length that the game's rules permits (the chooser string).
 
-Guesser: A class that let the user guess numbers in size the game has set. the user will get the numbers of bulls and cows and make gusses until the 10'th turn or until he win.
+Guesser: A class that let the user guess numbers in size the game has set. The user will get the numbers of bulls and cows and make gusses until the 10'th turn or until he wins.
 
 Calculate: A class that calculate the number of the bulls and cows in every new guess.
 
