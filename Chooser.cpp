@@ -1,4 +1,3 @@
-#pragma once
 #include "Chooser.hpp"
 #include <string>
 #include <iostream>
