@@ -1,39 +1,50 @@
-#include "SmartGuesser.hpp"
-#include <string>
 #include <iostream>
-#include <bits/stdc++.h>
+#include <algorithm>
+#include "SmartGuesser.hpp"
 using namespace std;
 
-int* bullpgia::SmartGuesser::invalidChoicesArray(string& str){
-
-    for(int i=0; i<str.length();i++){
-        this->arr[(str[i]-48)] = -1;
-    }
-    for(int i=0; i<10; i++){
-        cout<<"-1 for bad numbers and 0 for numbers left to guess with"<<endl;
-        cout<< arr[i] << "\t";
-    }
-
-    return arr;
-}
-
 void bullpgia::SmartGuesser::learn(string reply) {
+    if(Comb.size()<length){
+        bull = reply[0]-48;
+        pgia = reply[2]-48;
+        for(int i = 0;i<bull;i++){
+            Comb.push_back(numG);
+        }
+        for(int i = 0;i<pgia;i++){
+            Comb.push_back(numG);
+        }
 
-    this->bull = reply[0];
-    this->pgia = reply[2];
-    if(this->bull==0 && this->pgia==0){
-        invalidChoicesArray(this->clientGuess);
+    }else if(Comb.size() == length){
+        Last.clear();
+        for(int i=0;i<length;i++){
+            Last.push_back(Comb[i]);
+        }
     }
-    cout<<"last game was:reply[2] "+to_string(bull)+","+to_string(pgia) <<endl;
+    if(numG<'9')
+        numG++;
 }
 
 void bullpgia::SmartGuesser::startNewGame(uint Length) {
-    this->length=Length;
-    cout<<"Starting new game: "<<endl;
+    length=Length;
+    Comb.clear();
+    Comb.reserve(length);
+    pgia=0;
+    bull = 0;
+    Last.clear();
+    numG='0';
+
+    cout<<"Staring new game: "<<endl;
 }
 
 string bullpgia::SmartGuesser::guess() {
+    if(Comb.size()<length){
+        Last.clear();
+        for(int i=0 ;i<length;i++){
 
-
-    return "";
+            Last.push_back(numG);
+        }
+    }else{
+        random_shuffle(Last.begin(), Last.end());
+    }
+    return Last;
 }
