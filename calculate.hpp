@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+typedef unsigned int uint;
 using namespace std;
 
 namespace bullpgia{
