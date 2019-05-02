@@ -30,8 +30,8 @@ Guesser: A class that let the user guess numbers in size the game has set. The u
 Calculate: A class that calculate the number of the bulls and cows in every new guess.
 
 SmartGuesser: A program that uses the same 10 guesses (depend on the size the game has set),for example: if the game set the size to 4, the program will guess 0000,1111,2222,.....,9999 until it gets 4 bulls.
-              if the program gets in the guess "1111" 2 bulls, it learns that there are two 1 in the sequence, and keep counting the bulls until it reaches 4.
-              after it gets 4 numbers that are in the sequence, the program randomly arrange the digits that it received until it won. 
+              If the program gets in the guess "1111" 2 bulls, it learns that there are two 1 in the sequence, and keep     counting the bulls until it reaches 4.
+              After it gets 4 numbers that are in the sequence, the program randomly arrange the digits that it received until it won. 
 
 note: The SmartGuesser program is not very smart. In our cpp course we were asked to make a smart program that can beat the game in 100 and less guesses (size=4).
 
