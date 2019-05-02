@@ -1,5 +1,6 @@
 #pragma once
 
+#include <vector>
 #include "Guesser.hpp"
 #include <iostream>
 
@@ -9,30 +10,18 @@ namespace bullpgia{
     class SmartGuesser : public bullpgia::Guesser{
 
     private:
-        string clientGuess;
-        string bestGuess = " ";
+       
 
     public:
+
+        vector<char> Comb;
+        int numG;
+        int bull;
+        int pgia;
+        string Last;
         uint length;
-        uint bull;
-        uint pgia;
-        int arr[10] = {0,0,0,0,0,0,0,0,0,0};
-
-        int* invalidChoicesArray(string& str);
-
-        void setBestGuess(string newGuess){
-            this->bestGuess = newGuess;
-        }
-
-        string getBestGuess(){
-            return this->bestGuess;
-        }
 
         SmartGuesser(){}
-
-        SmartGuesser(const string& smart){
-            this->clientGuess = smart;
-        }
 
         ~SmartGuesser(){}
 
