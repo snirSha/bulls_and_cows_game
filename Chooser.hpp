@@ -1,4 +1,3 @@
-
 #pragma once
 #include "calculate.hpp"
 #include <string>
