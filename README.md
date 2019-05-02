@@ -25,11 +25,11 @@ The rules of the game in our course are:
 
 * Chooser: A function that use random number with repetitions to build a string in length that the game's rules permits (the chooser string).
 
-* Guesser: A class that let the user guess numbers in size the game has set. The user will get the numbers of bulls and cows and make gusses until the 10'th turn or until he wins.
+* Guesser: A class that let the user guess numbers in size that the game has set. The user will get the numbers of bulls and cows and make gusses until the 100'th turn or until he wins.
 
 * Calculate: A class that calculate the number of the bulls and cows in every new guess.
 
-* SmartGuesser: A program that uses the same 10 guesses (depend on the size the game has set),for example: if the game set the size to 4, the program will guess 0000,1111,2222,.....,9999 until it gets 4 bulls.
+* SmartGuesser: A program that uses the same 10 guesses (depends on the size that the game has set), for example: if the game set the size to 4, the program will guess 0000,1111,2222,.....,9999 until it gets 4 bulls.
               If the program gets in the guess "1111" 2 bulls, it learns that there are two 1's in the sequence, 
               and keep counting the bulls until it reaches 4.
               After it gets 4 numbers that are in the sequence, the program randomly arrange the digits that it received until it wins. 
