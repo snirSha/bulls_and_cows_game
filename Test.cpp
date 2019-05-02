@@ -46,7 +46,7 @@ int main() {
 		RandomChooser randy;
 		SmartGuesser smarty;
 		for (uint i=0; i<100; ++i) {
-			testcase.CHECK_EQUAL(play(randy, smarty, 4, 100)<=100, true);  // smarty should always win in at most 10 turns!
+			testcase.CHECK_EQUAL(play(randy, smarty, 4, 100)<=100, true);  // smarty should always win in at most 100 turns!
 		}
 		
 		//MY TESTS///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -78,13 +78,7 @@ int main() {
 		.CHECK_EQUAL(play(c12121, g54321, 5, 100), 101)           // guesser loses by running out of turns.
 		.CHECK_EQUAL(play(c999, g999, 3, 100), 1)                 // guesser wins in one turn.
 		;
-
-		testcase.setname("My test-Play with smart guesser");
-		RandomChooser r;
-		SmartGuesser s;
-		testcase.CHECK_EQUAL(play(r, s, 5, 100)<=1, false);   // the propability that s will guess rigth the chooser's number is infinitesimal
-		testcase.CHECK_EQUAL(play(r, s, 5, 100)<=100, true);  //s should guess the right five numbers in 100 turns   		  		 
-		testcase.CHECK_EQUAL(play(r, s, 3, 100)<=8, true);    //s should guess the right three numbers in 8 turns   		  		 
+ 		  		 
 
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////
     grade = testcase.grade();
