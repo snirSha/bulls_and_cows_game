@@ -16,7 +16,7 @@ namespace bullpgia{
 
 
     public:
-        //static int guessNumber;
+
         uint length;
 
         Guesser(){
@@ -45,21 +45,17 @@ namespace bullpgia{
 
         virtual void learn(string reply){
             int position = this->clientGuess.find(",");
-            //setBullCounter(std::stoi(this->clientGuess.substr(0 , position)));
-            //setPgiaCounter(std::stoi(this->clientGuess.substr(position+1, this->clientGuess.length()-1)));
-            cout<<"learning"<<endl;
         }
 
         virtual void startNewGame(uint length){
-            cout<<"New game has started"<<endl;
+            //cout<<"New game has started"<<endl;
             setBullCounter(0);
             setPgiaCounter(0);
             this->length=length;
-            //this->guessNumber = 0;
+
         }
 
         virtual string guess(){
-            //this->guessNumber++;
             string newGuess="";
             cin>>newGuess;
             return newGuess;
