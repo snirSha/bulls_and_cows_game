@@ -34,7 +34,7 @@ The rules of the game in our course are:
               and keep counting the bulls until it reaches 4.
               After it gets 4 numbers that are in the sequence, the program randomly arrange the digits that it received until it wins. 
 
-note: The SmartGuesser program is not very smart. In our cpp course we were asked to make a smart program that can beat the game in 100 and less guesses (size=4).
+Note: The SmartGuesser program is not very smart. In our cpp course we were asked to make a smart program that can beat the game in 100 and less guesses (size=4).
 
 ## Sources:
 
